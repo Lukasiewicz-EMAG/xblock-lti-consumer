@@ -70,6 +70,7 @@
         </section>
     % endif
     % if launch_target == 'iframe':
+        <script>console.log('Test from custom lti script')</script>
         <div id="lti-iframe-container" data-target="${form_url}" style="height:${inline_height}px;">
             ## The result of the LTI launch form submit will be rendered here.
             ## Don't pass in the initial_launch_url. Let the Javascript set the src, so we can get PII sharing consent
