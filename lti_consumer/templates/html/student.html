@@ -70,6 +70,27 @@
         </section>
     % endif
     % if launch_target == 'iframe':
+        <script type="text/javascript">
+            // Create browser compatible event handler.
+            const eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+            const eventer = window[eventMethod];
+            const messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+            // Listen for a message from the iframe.
+            eventer(messageEvent, function(e) {
+            const data = e.data;
+            if (typeof data === 'string' || data instanceof String) {
+                if (e.data.indexOf('resize::') != -1) {
+                const height = +data.replace('resize::', '');
+                console.log('resize', height);
+                const iframeElem = document.getElementById('unit-iframe');
+        
+                if (iframeElem) {
+                    iframeElem.style.height = height + 50 + 'px';
+                }
+                }
+            }
+            }, false);
+        </script>
         <div id="lti-iframe-container" data-target="${form_url}" style="height:${inline_height}px;">
             ## The result of the LTI launch form submit will be rendered here.
             ## Don't pass in the initial_launch_url. Let the Javascript set the src, so we can get PII sharing consent
