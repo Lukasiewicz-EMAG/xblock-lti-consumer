@@ -75,6 +75,23 @@
     }
 }
 
+.xblock-student_view.xblock-student_view-lti_consumer div.lti_consumer .wrapper-lti-link .lti-link button {
+    font-size: 18px;
+    line-height: 20.72px;
+    background: #2E6CD3;
+    padding: 11px 45px;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    font-family: Roboto;
+}
+
+.xblock-student_view.xblock-student_view-lti_consumer div.lti_consumer .wrapper-lti-link {;
+    display: flex;
+    justify-content: center;
+    background-color:  none
+}
+
 .xblock-student_view.xblock-student_view-lti_consumer {
     h2.problem-header {
         display: inline-block;
@@ -92,8 +109,10 @@
         margin: 0 auto;
 
         .wrapper-lti-link {
-            font-size: 14px;
-            background-color: #f6f6f6;
+            display: flex;
+            justify-content: center;
+            font-size: 18px;
+            background-color:  none
             padding: 20px;
 
             .lti-link {
@@ -102,8 +121,14 @@
                 text-align: left;
 
                 button {
-                    font-size: 13px;
-                    line-height: 20.72px;
+                    font-size: 18px;
+                    line-height: 20.72px;                   
+                    background: #2E6CD3;
+                    padding: 11px 45px;
+                    color: #fff;
+                    border: none;
+                    border-radius: 15px;
+                    font-family: Roboto;
                 }
             }
         }
