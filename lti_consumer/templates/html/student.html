@@ -81,9 +81,8 @@
             if (typeof data === 'string' || data instanceof String) {
                 if (e.data.indexOf('resize::') != -1) {
                 const height = +data.replace('resize::', '');
-                console.log('resize', height);
                 const iframeElem = document.getElementById('lti-iframe-container');
-        
+
                 if (iframeElem) {
                     iframeElem.style.height = height + 50 + 'px';
                 }
