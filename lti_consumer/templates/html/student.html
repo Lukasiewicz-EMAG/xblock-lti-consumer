@@ -24,7 +24,7 @@
 
 % if (launch_url or lti_1p3_launch_url) and not hide_launch:
     % if launch_target in ['modal', 'new_window']:
-        <section class="wrapper-lti-link test-change">
+        <section class="wrapper-lti-link">
             % if description:
                 <div class="lti-description">${description}</div>
             % endif
@@ -82,7 +82,7 @@
                 if (e.data.indexOf('resize::') != -1) {
                 const height = +data.replace('resize::', '');
                 const iframeElem = document.getElementById('lti-iframe-container');
-                    console.log("XBLOCK-LTI","test-change")
+
                 if (iframeElem) {
                     iframeElem.style.height = height + 50 + 'px';
                 }
