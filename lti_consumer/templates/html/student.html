@@ -82,7 +82,7 @@
                 if (e.data.indexOf('resize::') != -1) {
                 const height = +data.replace('resize::', '');
                 const iframeElem = document.getElementById('lti-iframe-container');
-
+                    console.log("XBLOCK-LTI","test-change")
                 if (iframeElem) {
                     iframeElem.style.height = height + 50 + 'px';
                 }
